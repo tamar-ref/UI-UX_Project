@@ -1,0 +1,88 @@
+section {
+    background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
+    color: white;
+    margin: 0;
+    padding: 2rem;
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {}
+
+.faq-section h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: palevioletred;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+details {
+    background: #2a2a2a;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #444;
+}
+
+details[open] {
+    background: #333;
+    border-color: palevioletred;
+    box-shadow: 0 0 10px palevioletred;
+}
+
+summary {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+}
+
+summary::marker {
+    display: none;
+}
+
+summary::after {
+    content: '+';
+    position: absolute;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+    color: palevioletred;
+}
+
+details[open] summary::after {
+    content: '–';
+    transform: rotate(180deg);
+}
+
+details p {
+    padding: 0 1.5rem 1rem;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
