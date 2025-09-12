@@ -27,36 +27,36 @@
     <main>
         <h1>Media Gallery</h1>
         <div class="gallery">
-            <img src="pictures/media/1.jpg" alt="Description 1" class="thumbnail">
-            <img src="pictures/media/2.jpg" alt="Description 2" class="thumbnail">
-            <img src="pictures/media/3.jpg" alt="Description 3" class="thumbnail">
-            <img src="pictures/media/4.jpg" alt="Description 4" class="thumbnail">
-            <img src="pictures/media/5.jpg" alt="Description 5" class="thumbnail">
-            <img src="pictures/media/6.jpg" alt="Description 6" class="thumbnail">
-            <img src="pictures/media/7.jpg" alt="Description 7" class="thumbnail">
-            <img src="pictures/media/8.jpg" alt="Description 8" class="thumbnail">
-            <img src="pictures/media/9.jpg" alt="Description 9" class="thumbnail">
-            <img src="pictures/media/10.jpg" alt="Description 10" class="thumbnail">
-            <img src="pictures/media/11.jpg" alt="Description 11" class="thumbnail">
-            <img src="pictures/media/12.jpg" alt="Description 12" class="thumbnail">
-            <img src="pictures/media/13.jpg" alt="Description 13" class="thumbnail">
-            <img src="pictures/media/14.jpg" alt="Description 14" class="thumbnail">
-            <img src="pictures/media/15.jpg" alt="Description 15" class="thumbnail">
-            <img src="pictures/media/16.jpg" alt="Description 16" class="thumbnail">
-            <img src="pictures/media/17.jpg" alt="Description 17" class="thumbnail">
-            <img src="pictures/media/18.jpg" alt="Description 18" class="thumbnail">
-            <img src="pictures/media/19.jpg" alt="Description 19" class="thumbnail">
-            <img src="pictures/media/20.jpg" alt="Description 20" class="thumbnail">
-            <img src="pictures/media/21.jpg" alt="Description 21" class="thumbnail">
-            <img src="pictures/media/22.jpeg" alt="Description 22" class="thumbnail">
-            <img src="pictures/media/23.jpg" alt="Description 23" class="thumbnail">
-            <img src="pictures/media/24.jpg" alt="Description 24" class="thumbnail">
-            <img src="pictures/media/25.avif" alt="Description 25" class="thumbnail">
-            <img src="pictures/media/26.jpg" alt="Description 26" class="thumbnail">
-            <img src="pictures/media/27.avif" alt="Description 27" class="thumbnail">
-            <img src="pictures/media/28.jpg" alt="Description 28" class="thumbnail">
-            <img src="pictures/media/29.avif" alt="Description 29" class="thumbnail">
-            <img src="pictures/media/30.jpg" alt="Description 30" class="thumbnail">
+            <img src="pictures/media/1.jpg" alt="picture 1" class="thumbnail">
+            <img src="pictures/media/2.jpg" alt="picture 2" class="thumbnail">
+            <img src="pictures/media/3.jpg" alt="picture 3" class="thumbnail">
+            <img src="pictures/media/4.jpg" alt="picture 4" class="thumbnail">
+            <img src="pictures/media/5.jpg" alt="picture 5" class="thumbnail">
+            <img src="pictures/media/6.jpg" alt="picture 6" class="thumbnail">
+            <img src="pictures/media/7.jpg" alt="picture 7" class="thumbnail">
+            <img src="pictures/media/8.jpg" alt="picture 8" class="thumbnail">
+            <img src="pictures/media/9.jpg" alt="picture 9" class="thumbnail">
+            <img src="pictures/media/10.jpg" alt="picture 10" class="thumbnail">
+            <img src="pictures/media/11.jpg" alt="picture 11" class="thumbnail">
+            <img src="pictures/media/12.avif" alt="picture 12" class="thumbnail">
+            <img src="pictures/media/13.jpg" alt="picture 13" class="thumbnail">
+            <img src="pictures/media/14.jpg" alt="picture 14" class="thumbnail">
+            <img src="pictures/media/15.jpg" alt="picture 15" class="thumbnail">
+            <img src="pictures/media/16.jpg" alt="picture 16" class="thumbnail">
+            <img src="pictures/media/17.jpg" alt="picture 17" class="thumbnail">
+            <img src="pictures/media/18.jpg" alt="picture 18" class="thumbnail">
+            <img src="pictures/media/19.jpg" alt="picture 19" class="thumbnail">
+            <img src="pictures/media/20.jpg" alt="picture 20" class="thumbnail">
+            <img src="pictures/media/21.jpg" alt="picture 21" class="thumbnail">
+            <img src="pictures/media/22.jpeg" alt="picture 22" class="thumbnail">
+            <img src="pictures/media/23.jpg" alt="picture 23" class="thumbnail">
+            <img src="pictures/media/24.jpg" alt="picture 24" class="thumbnail">
+            <img src="pictures/media/25.avif" alt="picture 25" class="thumbnail">
+            <img src="pictures/media/26.jpg" alt="picture 26" class="thumbnail">
+            <img src="pictures/media/27.avif" alt="picture 27" class="thumbnail">
+            <img src="pictures/media/28.jpg" alt="picture 28" class="thumbnail">
+            <img src="pictures/media/29.avif" alt="picture 29" class="thumbnail">
+            <img src="pictures/media/30.jpg" alt="picture 30" class="thumbnail">
         </div>
         <div id="lightbox-overlay">
             <span id="lightbox-close">✕</span>
@@ -85,26 +85,8 @@
             <p>© 2025 Fitness Project. All rights reserved.</p>
         </div>
     </footer>
-    <script src="JS/script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const overlay = document.getElementById('lightbox-overlay');
-            const lightboxImg = overlay.querySelector('img');
-            const closeBtn = document.getElementById('lightbox-close');
-            const galleryImages = document.querySelectorAll('.gallery img');
-            galleryImages.forEach(img => {
-                img.addEventListener('click', () => {
-                    lightboxImg.src = img.src;
-                    overlay.style.display = 'flex';
-                });
-            });
-            closeBtn.addEventListener('click', () => {
-                overlay.style.display = 'none';
-                lightboxImg.src = '';
-            });
-        });
-    </script>
-
+    <script src="JS/general.js"></script>
+    <script src="JS/media.js"></script>
 </body>
 
 </html>

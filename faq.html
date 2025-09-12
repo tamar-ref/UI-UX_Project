@@ -77,22 +77,8 @@
             <p>© 2025 Fitness Project. All rights reserved.</p>
         </div>
     </footer>
-    <script src="JS/script.js"></script>
-    <script>
-        document.querySelectorAll('details').forEach(detail => {
-            detail.addEventListener('toggle', () => {
-                const paragraph = detail.querySelector('p');
-                if (detail.open) {
-                    paragraph.style.animation = 'none';
-                    void paragraph.offsetHeight;
-                    paragraph.style.animation = 'fadeIn 0.5s ease';
-                    paragraph.style.opacity = '1';
-                } else {
-                    paragraph.style.opacity = '0';
-                }
-            });
-        });
-    </script>
+    <script src="JS/general.js"></script>
+    <script src="JS/faq.js"></script>
 </body>
 
 </html>
