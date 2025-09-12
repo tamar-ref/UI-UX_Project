@@ -15,8 +15,7 @@ main form {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    font-family: Arial, sans-serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 main input[type="text"],
@@ -46,8 +45,8 @@ main input[type="submit"] {
 }
 
 main input[type="reset"] {
-    background-color: #ccc;
-    color: #000;
+    background: #333;
+    color: white;
 }
 
 main input[type="submit"] {
@@ -60,7 +59,7 @@ main input[type="submit"]:hover {
 }
 
 main input[type="reset"]:hover {
-    background-color: #b3b3b3;
+    background: #2a2a2a;
 }
 
 @media (max-width: 500px) {

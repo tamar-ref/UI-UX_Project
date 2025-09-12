@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="CSS/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -13,7 +14,7 @@
     <header>
         <img src="pictures/logo.png" alt="Logo">
         <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" id="hamburger">☰</label>
+        <label for="menu-toggle" id="burger">☰</label>
         <nav>
             <a href="home.html">Home</a>
             <a href="about.html" id="currentPage">About</a>
@@ -21,17 +22,76 @@
             <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <div id="overlay"></div>
     </header>
     <main>
-
+        <h1>About Our Project</h1>
+        <section class="owner">
+            <img src="pictures/owner.jpg" alt="owner Photo">
+            <div>
+                <h2>John Smith – Founder & Coach</h2>
+                <p>
+                    John Smith is a professional fitness trainer with over 15 years of experience in personal coaching,
+                    group classes, and nutrition guidance. He founded this project with a vision to make a healthy
+                    lifestyle
+                    accessible to everyone.
+                </p>
+            </div>
+        </section>
+        <section class="project">
+            <img src="pictures/studio.jpg" alt="studio">
+            <div>
+                <h2>Our Mission</h2>
+                <span>
+                    Our project aims to inspire people to adopt balanced habits that include proper exercise and
+                    nutrition.
+                    We believe in consistency, motivation, and community support.
+                </span>
+                <span id="more">
+                    Our training programs are designed to help each client reach their personal goals, whether it's
+                    building strength, improving endurance, or maintaining a healthy lifestyle. We provide
+                    customized
+                    plans, practical nutrition tips, and constant guidance to ensure every workout is effective and
+                    enjoyable.
+                </span>
+                <button onclick="readMore()" id="myBtn">Read more</button>
+            </div>
+        </section>
     </main>
     <footer>
-        <i class="fa fa-facebook-square"></i>
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-pinterest"></i>
-        <i class="fa fa-youtube-play"></i>
-        <i class="fa fa-whatsapp"></i>
+        <div id="details">
+            <p><b>Phone:</b> 987-6543</p>
+            <p><b>Email:</b> contact@fitnessproject.com</p>
+            <p><b>Address:</b> 42 Wellness Avenue, Los Angeles, CA, USA</p>
+            <p><b>Opening Hours:</b> 6:00 AM - 11:00 PM</p>
+        </div>
+        <div id="socials">
+            <i class="fa fa-facebook-square"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-pinterest"></i>
+            <i class="fa fa-youtube-play"></i>
+            <i class="fa fa-whatsapp"></i>
+        </div>
+        <hr>
+        <div id="rights">
+            <p>© 2025 Fitness Project. All rights reserved.</p>
+        </div>
     </footer>
+    <script src="JS/script.js"></script>
+    <script>
+        function readMore() {
+            var moreWrapper = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (moreWrapper.classList.contains('expanded')) {
+                moreWrapper.classList.remove('expanded');
+                btnText.innerHTML = "Read more";
+            } else {
+                moreWrapper.classList.add('expanded');
+                btnText.innerHTML = "Read less";
+            }
+        }
+    </script>
 </body>
 
 </html>

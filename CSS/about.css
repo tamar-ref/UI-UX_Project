@@ -1,0 +1,93 @@
+main {
+    padding: 90px 20%;
+    font-size: 20px;
+}
+
+.owner,
+.project {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-direction: row;
+}
+
+.owner {
+    align-items: center;
+}
+
+.project {
+    align-items: flex-start;
+}
+
+.owner img,
+.project img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.owner div,
+.project div {
+    flex: 1;
+}
+
+.project div {
+    display: flex;
+    flex-direction: column;
+}
+
+.project div button {
+    align-self: flex-start;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+button {
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #d45d82;
+}
+
+#more {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+#more.expanded {
+    max-height: 500px;
+}
+
+@media (max-width: 768px) {
+
+    main {
+        text-align: center;
+    }
+
+    .owner,
+    .project {
+        flex-direction: column;
+        align-items: center !important;
+    }
+
+    .owner img,
+    .project img {
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 1rem;
+    }
+
+    .project div button {
+        align-self: center;
+    }
+}
